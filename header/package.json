@@ -1,0 +1,24 @@
+{
+  "name": "header-application",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-scripts": "0.9.5",
+    "babel-cli": "^6.24.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "yarn run start:dev",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "transpile": "NODE_ENV=production babel src --out-dir transpiled --presets react-app",
+    "start:prod": "NODE_ENV=production node server.js",
+    "start:dev": "yarn run build && yarn run transpile && node server.js"
+  }
+}
